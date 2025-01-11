@@ -12,7 +12,7 @@ body, html{
     place-items: center;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom right, rgb(119, 198, 243), rgb(106, 158, 221));
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
 }
 
 form{

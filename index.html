@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="images/logo_bleu.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>CAS INPT</title>
 </head>
 <body>
@@ -28,7 +29,7 @@
         </div>
     </section>
     <section class="activities">
-        <h1 class="title">ACTIVITIES</h1 class="title">
+        <h1 class="title">ACTIVITIES</h1>
         <div class="gathering">
             <div class="carousel">
                 <div class="container">
@@ -82,28 +83,61 @@
                     </div>
                 </div>
             </div>
-            <button class="move prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="move next" onclick="moveSlide(1)">&#10095;</button>
+            <button class="move prev" onclick="moveSlide(-1, true); resetInterval()">&#10094;</button>
+            <button class="move next" onclick="moveSlide(1, true); resetInterval()">&#10095;</button>
         </div>
     </section>
     <section class="members">
         <h1 class="title">MEMBERS WORDS</h1>
-        <div class="container">
-            <div class="word"></div>
-            <div class="word"></div>
-            <div class="word"></div>
-            <div class="word"></div>
-            <div class="word"></div>
+        <div class="gathering">
+            <div class="container">
+                <div class="word">
+                    <div class="name">طه شكير</div>
+                    <div class="text" style="direction: ltr;">"Jouj hwayj ayw9fou m3ak f hyatek:
+                        rdat l walidin o lkhir li kadirou f dnya
+                        Et d'ailleurs CAS l9it fih l'opportunité bch ndir
+                        bzf d hwayj zouinin m3a nas zouinin li dwzt
+                        m3ahom des moments ma3mri nsahom."
+                    </div>
+                </div>
+                <div class="word">
+                    <div class="name">أميمة أقلدو</div>
+                    <div class="text">"نادي الأعمال الاجتماعية خلاني نتعرف على راسي كثر، و نتعرف على ناس لي لداخل ديالهم عامر بالخير... به عرفت بلي أي حاجة كتبان لينا غي زايد ناقص، راها تقدر تدير فرق كبير ف حياة ناس آخرين.
+                        النادي لي خرجني من رحلة تحقيق أهداف ذاتية، و حدد ليا اهداف آخرين..."<br>
+                        "كن متطوعا ليكون وجودك في هذه الحياة أجمل"
+                    </div>
+                </div>
+                <div class="word">
+                    <div class="name">شيماء عتوي</div>
+                    <div class="text">"نادي الأعمال الاجتماعية قبل ما يكون نادي فهو عائلة كبيرة، تعرفت فيها على ناس زوينين بزاف قلبهم عامر بالخير و كيعطيو بلا ما إتسناو المقابل. فهاد النادي تعلمت نخرج من منطقة الراحة ديالي، و تعلمت نشوف السعادة ديالي فالسعادة ديال الناس لآخرين. عاونا ناس كثار، دخلنا الفرحة على شحال من دار، دوزنا تجارب ماكتنساش و هادشي كافي باش إخلي هاد عامين راسخة فالقلب ديالي."</div>
+                </div>
+                <div class="word">
+                    <div class="name">خالد الكموس</div>
+                    <div class="text">"في تجربتي مع نادي الأعمال الاجتماعية أتيحت لي الفرصة في المشاركة في جميع الأنشطة التي يقوم بها، في الإنضمام إلى عائلة كبيرة طيبة يملأها فعل الخير، و في رؤية السعادة في وجوه أناس لا تجمعنا بهم أية صلة. كانت قبوبنا تنبض بكل عطاء فالكل كان يضحي بوقته من أجل الوصول إلى هدفنا الأسمى و هو إسعاد أطفال، عائلات أو قرية بأكملها. بخلاصة شكرا لهاذا النادي وما كانت هذه التجربة إلا البداية".</div>
+                </div>
+                <div class="word">
+                    <div class="name">حسناء أوبوح</div>
+                    <div class="text">تجربتي في نادي الأعمال الاجتماعية كانت أحسن ما عشتو في المعهد فهاد السنوات، تجربة اللي عرفاتني على ناس الخير و ناس اللي يستاهلو الخير، إحساس زوين باش تكون كتخدم باش تفرح شي حد ولو بالقليل، و أهم ما كان زوين في النادي هيا دروس الدعم للأطفال الصغار كل يوم أحد، أطفال محتاجين اللي يوقف معاهوم و إفيدهوم بما اتاه الله من العلم و اللي إشجعهوم. و كيبقى نادي الأعمال الاجتماعية قلوب تنبض بالعطاء".</div>
+                </div>
+                <div class="word">
+                    <div class="name">أمكسو سلمى</div>
+                    <div class="text">الCAS من بين أحسن الحوايج لي دوزت ف عامين ديال INPT، سواء فالعام الأول ملي كنت كنكتاشف النادي، أو فالعام الثاني فاش كنت عضو من المكتب.
+                        دوزت تجارب مكتنساش و تعلمت نقنع بلي عندي حيت شفت ناس معدبين بزاف و فأمس الحاجة للأمور البسيطة.
+                        حاولنا نديرو لي فجهدنا باش نفرحو أكبر عدد ديال الأشخاص، لي رغم الفقر و الظروف القاسية لي كيعيشوها، متفائلين و كرماء بزاف.
+                        تعلمت نفرح للفرحة ديال لخرين حيت السعادة كتجي فإسعادهم.
+                        تعرفت على ناس الداخل ديالهم عامر بالخير و دوزت أوقات عمرني نساهم".
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="footer">
-        <div class="icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-        </div>
         <p>قلب ينبض بالعطاء</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/cas.inpt?locale=fr_FR" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/casinpt/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADI4BLoBiAFs-4VavEJZSX-8Rpo3PQnxsdM&keywords=club%20affaires%20sociales%20inpt&origin=RICH_QUERY_SUGGESTION&position=0&searchId=335de1ce-8703-483b-8564-aeaf3185f06c&sid=gEA&spellCorrectionEnabled=false" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
     </section>
     <script src="script/home.js"></script>
 </body>

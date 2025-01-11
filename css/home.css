@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
 
 *{
     margin: 0;
@@ -15,7 +16,7 @@ body, html{
 section{
     width: 80%;
     text-align: center;
-    margin: 50px auto;
+    margin: 150px auto;
 }
 
 .header{
@@ -23,7 +24,7 @@ section{
     height: 100vh;
     background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
     position: relative;
-    margin: 0 0 50px 0;
+    margin: 0 0 150px 0;
 }
 
 nav{
@@ -74,7 +75,7 @@ nav{
 }
 
 .login:hover{
-    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    background: linear-gradient(to right, rgb(106, 158, 221), rgb(119, 198, 243));
     letter-spacing: 3px;
 }
 
@@ -82,7 +83,7 @@ nav{
     color: white;
 }
 
-.name{
+.header .name{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -93,16 +94,17 @@ nav{
     text-align: center;
     width: 80vw;
     padding: 20px 0;
+    font-size: 80px;
+    font-weight: 600;
 }
 
 .name #arabe{
     font-family: 'Cairo', sans-serif;
-    font-size: 80px;
 }
 
-.name #fr{
-    font-size: 72px;
-}
+/* .name #fr{
+ 
+} */
 
 .activities{
     margin: auto;
@@ -110,16 +112,21 @@ nav{
 
 .title{
     font-size: 58px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
 }
 
 .gathering {
     position: relative;
-    width: 800px; /* Updated width */
+    width: 70vw;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgb(106, 158, 221);
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel .container {
@@ -137,27 +144,36 @@ nav{
 }
 
 .image-box img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
     width: 100%;
-    height: 450px; /* Adjusted height for better proportion */
+    height: 60vh;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .content {
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(119, 198, 243);
     color: white;
     padding: 10px;
     width: 100%;
+}
+
+.content h2{
+    font-family: 'Cairo', sans-serif;
 }
 
 .move {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(119, 198, 243);
     color: white;
     border: none;
+    border-radius: 10px;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
@@ -172,5 +188,76 @@ nav{
 }
 
 .move:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgb(106, 158, 221);
+}
+
+.members .container{
+    /* margin: 10px 10px; */
+    display: flex;
+    width: 70vw;
+    transition: transform 0.5s ease-in-out;
+}
+
+.word{
+    position: relative;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.word .text, .word .name{
+    font-family: 'Cairo', 'Poppins', sans-serif;
+    background-color: rgb(119, 198, 243);
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.word .name{    
+    font-size: 32px;
+    padding: 20px 100px 0 20px;
+    justify-content: start;
+}
+
+.word .text{
+    font-size: 22px;
+    padding: 0 20px 20px 20px;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer{
+    margin: 50px auto 0px auto;
+    gap: 20px;
+    padding-top: 10px;
+    background-color: #222;
+    width: 100%;
+}
+
+.icons .fa-brands {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.footer a{
+    font-size: 40px;
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer a:hover{
+    transform: scale(1.2);
+}
+
+.footer p{
+    font-family: 'Rakkas', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: white;
 }
