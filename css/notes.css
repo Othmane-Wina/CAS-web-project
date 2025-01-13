@@ -134,14 +134,10 @@ nav{
     letter-spacing: 3px;
 }
 
-.notes{
-    display: flex;
-    align-items: center;
-}
 .gathering {
     position: relative;
     width: 70vw;
-    margin: auto;
+    margin: 25px auto;
     overflow: hidden;
     border: 3px solid rgb(106, 158, 221);
     border-radius: 25px;
@@ -171,9 +167,10 @@ nav{
 }
 
 .comment .name{    
-    font-size: 22px;
-    padding: 20px 20px 0 20px;
-    justify-content: start;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 20px;
+    justify-content: center;
 }
 
 .comment .text{
@@ -181,6 +178,42 @@ nav{
     padding: 0 20px 20px 20px;
     justify-content: center;
     height: 100%;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.move {
+    background: rgb(119, 198, 243);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.move:hover {
+    background: rgb(106, 158, 221);
+}
+
+.navigation .number{
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(119, 198, 243);
+    font-size: 30px;
+    font-weight: 900;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navigation .number:hover{
+    color: rgb(106, 158, 221);
+    transform: scale(1.15);
 }
 
 .footer{
@@ -203,11 +236,6 @@ nav{
     background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: transform 0.3s ease-in-out;
-}
-
-.footer a:hover{
-    transform: scale(1.2);
 }
 
 .footer p{

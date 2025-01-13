@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/members.css">
-    <link rel="shortcut icon" href="images/logo_bleu.png" type="image/x-icon">
+    <link rel="icon" href="images/logo_bleu.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>CAS INPT</title>
 </head>
@@ -28,6 +28,18 @@
             <h1 id="fr"></h1> -->
         </div>
     </section>
+    <section class="members">
+        <div class="side">
+            <button class="move" onclick="isAdmin(); displayMembers()">MEMBERS</button>
+            <button class="move" onclick="displayAdmins()">ADMINS</button>
+        </div>
+        <div class="tables">
+            <div class="container">
+                
+            </div>
+        </div>
+        <div class="add-button"></div>
+    </section>
     <section class="footer">
         <p>قلب ينبض بالعطاء</p>
         <div class="icons">
@@ -36,5 +48,6 @@
             <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADI4BLoBiAFs-4VavEJZSX-8Rpo3PQnxsdM&keywords=club%20affaires%20sociales%20inpt&origin=RICH_QUERY_SUGGESTION&position=0&searchId=335de1ce-8703-483b-8564-aeaf3185f06c&sid=gEA&spellCorrectionEnabled=false" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </section>
+    <script src="script/members.js"></script>
 </body>
 </html>

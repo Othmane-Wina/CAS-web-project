@@ -24,8 +24,8 @@ function moveSlide(step, slide) {
 }
 
 setInterval(() => moveSlide(1, false), 18000);
-let id = setInterval(() => moveSlide(1, true), 5000);
 
+let id = setInterval(() => moveSlide(1, true), 5000);
 function resetInterval(){
     clearInterval(id);
     id = setInterval(() => moveSlide(1, true), 5000);
