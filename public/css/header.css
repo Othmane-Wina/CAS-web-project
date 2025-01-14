@@ -1,0 +1,72 @@
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;   
+}
+
+.nav-links li{
+    list-style: none;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons .fa-brands {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.footer a{
+    font-size: 40px;
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer a:hover{
+    transform: scale(1.2);
+}
+
+.footer p{
+    font-family: 'Rakkas', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: white;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+    10%{    
+        transform: scale(0.85);
+    }
+    20%{
+        transform: scale(1.15);
+    }
+    40% {
+        transform: scale(1);
+    }
+}

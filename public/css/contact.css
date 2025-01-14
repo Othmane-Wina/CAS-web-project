@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+section{
+    width: 80%;
+    text-align: center;
+    margin: 150px auto;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    /* position: relative; */
+    margin: 0 0 150px 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+}
+
+.logo_CAS{
+    height: 10vh;
+    width: auto;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;   
+}
+
+.nav-links li{
+    list-style: none;
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login{
+    margin-left: 5vw;
+    width: 10vw;
+    height: 5vh;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login:hover{
+    background: linear-gradient(to right, rgb(106, 158, 221), rgb(119, 198, 243));
+    letter-spacing: 3px;
+}
+
+.login a{
+    color: white;
+}
+
+.location{
+    position: relative;
+}
+
+.location iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    width: 80vw;
+    border-radius: 20px;
+}
+
+.contact-us{
+    width: 80vw;
+    margin: auto;
+}
+
+.contact-us h1{
+    font-size: 58px;
+    margin-bottom: 40px;
+}
+
+.contact-us .row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-col{
+    flex-basis: 50%;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    background-color: rgb(119, 198, 243);
+    border: 3px solid rgb(106, 158, 221);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.contact-col .button{
+    width: 250px;
+    height: 50px;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-col .button:hover{
+    background: linear-gradient(to right, rgb(106, 158, 221), rgb(119, 198, 243));
+    letter-spacing: 3px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div i{
+    font-size: 24px;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    margin: 10px 30px 10px 10px;
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+}
+
+.contact-col div span h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col div span p{
+    display: flex;
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0;
+}
+
+.footer{
+    margin: 50px auto 0px auto;
+    gap: 20px;
+    padding-top: 10px;
+    background-color: #222;
+    width: 100%;
+}
+
+.icons .fa-brands {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.footer a{
+    font-size: 40px;
+    text-decoration: none;
+    background: linear-gradient(to right, rgb(119, 198, 243), rgb(106, 158, 221));
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer a:hover{
+    transform: scale(1.2);
+}
+
+.footer p{
+    font-family: 'Rakkas', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    color: white;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+    0% {
+        transform: scale(1);
+    }
+    10%{    
+        transform: scale(0.85);
+    }
+    20%{
+        transform: scale(1.15);
+    }
+    40% {
+        transform: scale(1);
+    }
+}

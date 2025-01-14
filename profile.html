@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+<body>
+    <section class="profile-container">
+        <h1>Profile Settings</h1>
+        <div class="form-section">
+            <form id="updateEmailForm">
+                <h2>Update Email</h2>
+                <input type="email" id="newEmail" placeholder="New Email" required>
+                <button type="submit" class="glossy-button">Update Email</button>
+            </form>
+
+            <form id="updatePasswordForm">
+                <h2>Change Password</h2>
+                <input type="password" id="oldPassword" placeholder="Old Password" required>
+                <input type="password" id="newPassword" placeholder="New Password" required>
+                <button type="submit" class="glossy-button">Change Password</button>
+            </form>
+
+            <button id="deleteAccountBtn" class="glossy-button delete">Delete Account</button>
+        </div>
+    </section>
+    <script src="./js/profile.js"></script>
+</body>
+</html>

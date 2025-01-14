@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="icon" href="images/logo_bleu.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>CAS INPT</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo_white.png" alt="logo CAS" class="logo_CAS"></a>
+            <div id="navLinks">
+                <ul class="nav-links">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./Members.html">MEMBERS</a></li>
+                    <li><a href="./notes.html">NOTES</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+                <button class="login"><a href="./auth.html">Logout</a></button>
+            </div>
+        </nav>
+        <div class="name">
+            <h1>NOTES</h1>
+        </div>
+    </section>
+    <section class="create-note">
+        <h1>Notes</h1>
+        <div class="note">
+            <h3>Leave a comment</h3>
+            <form id="noteForm">
+                <textarea name="content" placeholder="Write your note..." required></textarea>
+                <button class="button" type="submit">Add Note</button>
+            </form>
+            <div id="notesSlider"></div>            
+        </div>
+    </section>
+    <section class="notes">
+        <div class="gathering">
+            <div class="container">
+                <div class="comment">
+                    <div class="name">chi wa7ed</div>
+                    <div class="text">l'CAS a7san club</div>
+                </div>
+                <div class="comment">
+                    <div class="name">مجهول</div>
+                    <div class="text">تجرية تعاش ولا تحكى</div>
+                </div>
+                <div class="comment">
+                    <div class="name">أنا</div>
+                    <div class="text">سليمان خاصو يصيفط ليا الفيديو</div>
+                </div>
+                <div class="comment">
+                    <div class="name">حنا</div>
+                    <div class="text">We're cooked</div>
+                </div>
+                <div class="comment">
+                    <div class="name">أنا عوتاني</div>
+                    <div class="text">الله يهدي علاء</div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="prev">
+                
+            </div>
+            <table>
+                <tr>
+                    <td>
+                        <button class="number" onclick="moveSlide(0, false)">1</button>
+                    </td>
+                    <td>
+                        <button class="number" onclick="moveSlide(1, false)">2</button>
+                    </td>
+                    <td>
+                        <button class="number" onclick="moveSlide(2, false)">3</button>
+                    </td>
+                    <td>
+                        <button class="number" onclick="moveSlide(3, false)">4</button>
+                    </td>
+                    <td>
+                        <button class="number" onclick="moveSlide(4, false)">5</button>
+                    </td>
+                </tr>
+            </table>
+            <div class="next">
+                <button class="move" onclick="moveSlide(1, true)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <p>قلب ينبض بالعطاء</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/cas.inpt?locale=fr_FR" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/casinpt/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAADI4BLoBiAFs-4VavEJZSX-8Rpo3PQnxsdM&keywords=club%20affaires%20sociales%20inpt&origin=RICH_QUERY_SUGGESTION&position=0&searchId=335de1ce-8703-483b-8564-aeaf3185f06c&sid=gEA&spellCorrectionEnabled=false" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
+    <script src="script/notes.js"></script>
+</body>
+</html>

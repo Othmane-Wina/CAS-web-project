@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+    id        Int       @id @default(autoincrement())
+    email     String    @unique
+    password  String
+    firstName String
+    lastName  String
+    role      String    @default("USER")
+    contacts  Contact[] @relation("UserToContact")
+    notes     Note[]    @relation("UserToNote")
+    members   Member[]  @relation("UserToMember")
+}
+
+model Member {
+    id          Int      @id @default(autoincrement())
+    grade       String
+    stream      String
+    userId      Int
+    user        User     @relation("UserToMember", fields: [userId], references: [id], onDelete: Cascade)
+    createdAt   DateTime @default(now())
+}
+model Contact {
+    id        Int      @id @default(autoincrement())
+    name      String
+    email     String
+    subject   String?
+    message   String
+    userId    Int
+    user      User     @relation("UserToContact", fields: [userId], references: [id], onDelete: Cascade)
+    createdAt DateTime @default(now())
+}
+
+
+model Note {
+    id        Int      @id @default(autoincrement())
+    content   String
+    userId    Int
+    user      User     @relation("UserToNote", fields: [userId], references: [id], onDelete: Cascade)
+    createdAt DateTime @default(now())
+}
+
+
+
+enum Role {
+  USER
+  ADMIN
+}

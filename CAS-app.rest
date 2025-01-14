@@ -1,0 +1,128 @@
+### Register a New User
+POST http://localhost:5005/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "Mehdi",
+    "lastName": "Mehdi",
+    "email": "Mehid.Mehdi@example.com",
+    "password": "password123"
+}
+
+###
+
+### Login as a User
+POST http://localhost:5005/auth/login
+Content-Type: application/json
+
+{   
+    "email": "Mehid.Mehdi@example.com",
+    "password": "password123"
+}
+
+###
+
+### Change Role (Testing Only)
+PUT http://localhost:5005/super/change-role
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+Content-Type: application/json
+
+{
+    "email": "Mehid.Mehdi@example.com",
+    "role": "ADMIN"
+}
+
+###
+
+### Get Admin Role (User Validation)
+GET http://localhost:5005/super/admins
+Authorization: Bearer <TOKEN>
+
+###
+
+### Promote User to Admin
+PUT http://localhost:5005/super/members/move-to-admin
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+
+{
+    "firstName": "Mehdi",
+    "lastName": "Mehdi"
+}
+
+###
+
+### Add a New Member
+POST http://localhost:5005/super/members
+Content-Type: application/json
+Authorization: Bearer <TOKEN>
+
+{
+    "firstName": "Youssef",
+    "lastName": "LOOO",
+    "grade": "ine1",
+    "stream": "aseds"
+}
+
+###
+
+### Delete a Member
+DELETE http://localhost:5005/super/members/jane.smith@example.com
+Authorization: Bearer <ADMIN_TOKEN>
+
+###
+
+### Add a New Admin
+POST http://localhost:5005/super/admins
+Content-Type: application/json
+Authorization: Bearer <ADMIN_TOKEN>
+
+{
+    "firstName": "Admin",
+    "lastName": "User",
+    "email": "admin.user@example.com",
+    "password": "secureadminpassword"
+}
+
+###
+
+### List All Members
+GET http://localhost:5005/super/members
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+
+###
+
+### Add Notes
+POST http://localhost:5005/super/notes
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+
+{
+    "content": "This is a test note."
+}
+
+###
+
+### List Notes
+GET http://localhost:5005/super/notes
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+
+###
+
+### Add a Contact
+POST http://localhost:5005/super/contacts
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo
+
+{
+    "name": "Support User",
+    "email": "support@example.com",
+    "subject": "Testing",
+    "message": "This is a test message."
+}
+
+###
+
+### Get All Contacts
+GET http://localhost:5005/super/contacts
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzM2ODg1MDI3LCJleHAiOjE3MzY5NzE0Mjd9.NZDizucbu1nlko7NLk7lx5qEcWPU5ipSF214Bs9UjMo

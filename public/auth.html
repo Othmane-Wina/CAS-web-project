@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="./css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="form-container">
+            <h2 id="form-title">Login</h2>
+            <form id="auth-form">
+                <!-- Name fields, dynamically shown during registration -->
+                <div id="name-fields" style="display: none;">
+                    <input type="text" id="firstName" placeholder="First Name" class="form-input">
+                    <input type="text" id="lastName" placeholder="Last Name" class="form-input">
+                </div>
+                <!-- Email and Password -->
+                <input type="email" id="email" placeholder="Email" class="form-input" required>
+                <input type="password" id="password" placeholder="Password" class="form-input" required>
+                <button type="submit" id="submit-button">Login</button>
+            </form>
+            <!-- Toggle between Login and Register -->
+            <p id="toggle-text">Don't have an account? <a href="#" id="toggle-auth">Register</a></p>
+        </div>
+    </div>
+    <script src="./script/auth.js"></script>
+</body>
+</html>

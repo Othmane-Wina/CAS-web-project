@@ -4,28 +4,46 @@
     <meta charset="UTF-8">
     <title> Login </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/logo_bleu.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link rel="shortcut icon" href="./images/logo_blue.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login.css" type="text/css">
 </head>
 <body>
     <div class="container">
         <form action="#" method="post">
             <div class="title">Login</div>
             <div class="input-box underline">
-                <input type="text" placeholder="Email" required>
+                <input id="emailInput" type="text" placeholder="Email" required>
                 <div class="underline"></div>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input id="passwordInput" type="password" placeholder="********" required>
                 <div class="underline"></div>
             </div>
             <div class="input-box button">
-                <input type="submit" name="" value="Login">
+                <button id="authBtn" onclick="authenticate()">
+                    Login
+                </button>
             </div>
         </form>
         <div class="signup">
-            <p>Don't you have an account ?<a href="signup.html">Sign Up</a></p>
+            <p>Don't you have an account ?<a href="signup.html" id="registerBtn" onclick="toggleIsRegister()">Sign Up</a></p>
         </div>
     </div>
 </body>
+<script>
+    let isRegistration = false;
+    let isAuthenticating = false;
+
+    const apiBase = '/';
+
+    const registerBtn = document.querySelector('#registerBtn');
+    const authBtn = document.querySelector('#authBtn');
+
+    async function toggleIsRegister() {
+        isRegistration = !isRegistration;
+        registerBtn.innerText = isRegistration ? 'Log in' : 'Sign up';
+        
+    }
+
+</script>
 </html>
