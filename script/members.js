@@ -10,6 +10,15 @@ let admins = [
     admin('El mechkouri', 'Seleymane', 'CLOUD', 'INE2', 'Vice President'),
     admin('Hrara', 'Mouloud', 'SESNUM', 'INE2', 'Logistic Chief'),
     admin('Ait said', 'Abdelouakel', 'CLOUD', 'INE2', 'Tresury'),
+    admin('Akhraz', 'Abdesamad', 'DATA', 'INE2', 'President'),
+    admin('Nait hmad oubrahim', 'Abdelali', 'CLOUD', 'INE2', 'Design Chief'),
+    admin('Hafidi', 'Ayoub', 'CLOUD', 'INE2', 'Caravan Chief'),
+    admin('El Hazal', 'Salma', 'CLOUD', 'INE2', 'Caravan co-Chief'),
+    admin('Addah', 'Aicha', 'Smart', 'INE2', 'General Secretary'),
+    admin('Ouissit', 'Lamyae', 'Smart', 'INE2', 'Media Chief'),
+    admin('Safi', 'Yahya', 'CLOUD', 'INE2', 'Media co-Chief'),
+    admin('Touama', 'Sara', 'AMOA', 'INE2', 'Sponsoring Chief'),
+    admin('404', 'Naima', 'CLOUD', 'INE2', 'Orphans Project Chief'),
 ]
 
 function member(family_name, personal_name, major, ine){
