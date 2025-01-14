@@ -83,6 +83,34 @@ nav{
     color: white;
 }
 
+.header .name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name h1{
+    text-align: center;
+    width: 80vw;
+    padding: 20px 0;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.desc{
+    margin: 100px auto;
+    padding: 30px;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: start;
+    border: 3px solid rgb(106, 158, 221);
+    border-radius: 25px;
+    background-color: rgb(119, 198, 243);
+    color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
 .footer{
     margin: 50px auto 0px auto;
     gap: 20px;

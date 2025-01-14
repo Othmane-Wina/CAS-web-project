@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/members.css">
-    <link rel="icon" href="images/logo_bleu.png" type="image/x-icon">
+    <link rel="icon" href="images/logo_bleu.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>CAS INPT</title>
 </head>
@@ -24,14 +24,13 @@
             </div>
         </nav>
         <div class="name">
-            <!-- <h1 id="arabe"></h1>
-            <h1 id="fr"></h1> -->
+            <h1>MEMBERS</h1>
         </div>
     </section>
     <section class="members">
         <div class="side">
-            <button class="move" onclick="isAdmin(); displayMembers()">MEMBERS</button>
-            <button class="move" onclick="displayAdmins()">ADMINS</button>
+            <button class="move" onclick="isAdmin(false); displayMembers()">MEMBERS</button>
+            <button class="move" onclick="isAdmin(true); displayAdmins()">ADMINS</button>
         </div>
         <div class="tables">
             <div class="container">

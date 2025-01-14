@@ -23,7 +23,7 @@ function admin(family_name, personal_name, major, ine, poste){
 let buttons = '';
 let th = '';
 
-function isAdmin(){
+function isAdmin(onAdmin){
     buttons = `
     <td>
         <button class="button delete" onclick="deleteMember(this)">
@@ -35,7 +35,7 @@ function isAdmin(){
     </td>
     `
     th = '<th>OPERATIONS</th>'
-    document.querySelector('.add-button').innerHTML = '<button class="add" onclick="addMember()">+</button>'
+    document.querySelector('.add-button').innerHTML = `<button class="add" onclick="addMember(${onAdmin})">+</button>`
 }
 
 function displayMembers(){
@@ -64,7 +64,7 @@ function displayMembers(){
 
 function displayAdmins(){
     let html = `
-        <table>
+        <table class="adminsTable">
             <tr>
                 <th>FAMILY NAME</th>
                 <th>PERSONAL NAME</th>
@@ -86,8 +86,6 @@ function displayAdmins(){
     })
     html += `</table>`
     document.querySelector('.container').innerHTML = html;
-    document.querySelector('.add-button').innerHTML = ' ';
-
 }
 
 function deleteMember(button, cancel){
@@ -152,10 +150,17 @@ function resetRow(button, originalValues) {
         `;
 }
 
-function addMember(){
-    let table = document.querySelector(".membersTable");
+function addMember(admin){
+    let table;
+    if(admin) {
+        table = document.querySelector(".adminsTable");
+    }
+    else {
+        table = document.querySelector(".membersTable");
+    }
     let newRow = document.createElement("tr");
     let columns = ["FAMILY NAME", "PERSONAL NAME", "MAJOR", "INE"];
+    if(admin) columns.push("POSTE");
     
     columns.forEach(() => {
         let cell = document.createElement("td");

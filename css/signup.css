@@ -125,3 +125,15 @@ form{
     letter-spacing: 4px;
     background: linear-gradient(to left, rgb(119, 198, 243), rgb(106, 158, 221));
 }
+
+.login p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: rgb(106, 158, 221);
+    text-decoration: none;
+    padding-left: 5px;
+}

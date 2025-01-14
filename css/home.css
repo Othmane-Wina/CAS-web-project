@@ -102,7 +102,7 @@ nav{
     font-family: 'Cairo', sans-serif;
 }
 
-/* .name #fr{
+/* .name #eng{
  
 } */
 
@@ -131,7 +131,6 @@ nav{
 
 .carousel .container {
     display: flex;
-    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -141,6 +140,10 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.image-box{
+    width: 50vw;
 }
 
 .image-box img {
